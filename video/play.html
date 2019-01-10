@@ -1,0 +1,62 @@
+
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="referrer" content="never">
+<title></title>
+<link rel="stylesheet" href="./DPlayer.min.css">
+<link rel="stylesheet" href="./DPlayer.min.css">
+<style type="text/css">
+body, html, .dplayer {
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			height: 100%;
+			background-color:#000;
+		}
+a {
+    text-decoration: none;
+  }
+</style>
+</head>
+<body marginwidth="0" marginheight="0">
+<div id="player" class="dplayer" style="overflow-y:scroll"><video controls="controls" poster="loading.gif" width="100%" height="40%" x-webkit-airplay="allow" src="http://vwecam.tc.qq.com/1006_cd190cc4c96c4cccbfd6c19f6af4dbbb.f20.mp4?ptype=http&amp;vkey=A97DEE3EDFE89B2BAA69E4D6947C4D6EC358AF3416175542132471D0F8B95BAE3DF65044BFFE0D96081DA4C9BD4806C1EBF19A340A6E9C9F"></video>
+
+
+
+	<img src="ad.jpg" width="100%" height="100%"/>
+
+</div>
+
+	
+<script type="text/javascript" src="./hls.min.js"></script>
+<script type="text/javascript" src="./DPlayer.min.js" charset="utf-8"></script>
+<script src="./flv.min.js"></script>
+<script type="text/javascript">
+  var isiPad = navigator.userAgent.match(/iPad|iPhone|Android|Linux|iPod/i) != null;
+
+  var url = document.location.toString();
+　var arrUrl = url.split("???");
+　var para = arrUrl[1];
+
+  if(isiPad){
+	
+  	document.getElementById('player').innerHTML = '<video controls="controls" poster="loading.gif" width="100%" height="40%" x-webkit-airplay="allow" src="'+para+'"></video> <img src="ad.jpg" width="100%" height="100%"/>';
+
+      }else {
+		var pic = "";
+		var dplayer = new DPlayer({
+			element: document.getElementById("player"),
+			autoplay: true,
+			video: {
+				url: para,
+                pic: pic
+			       }
+		});
+       }
+</script>
+
+
+
+
+</body></html>
