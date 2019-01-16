@@ -10,8 +10,8 @@
 body, html, .dplayer {
 			padding: 0;
 			margin: 0;
-			width: 100%;
-			height: 100%;
+			width: 50%;
+			height: 50%;
 			background-color:#000;
 		}
 a {
@@ -39,7 +39,7 @@ a {
   if(isiPad){
   	document.getElementById('player').innerHTML = '<video controls="controls" poster="loading.gif" width="100%" height="40%" x-webkit-airplay="allow" src="'+para+'"></video> <img src="ad.jpg" width="100%" height="100%"/>';
   }else {
-      	document.getElementById('player').style = ""; 
+      	 
 		var pic = "";
 		var dplayer = new DPlayer({
 			element: document.getElementById("player"),
