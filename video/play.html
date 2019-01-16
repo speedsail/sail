@@ -39,7 +39,9 @@ a {
 　var arrUrl = url.split("???");
 　var para = arrUrl[1];
   var title = arrUrl[2];
-  document.title = title;
+
+
+  document.title = decodeURI(title);
 
   if(isiPad){
 	
